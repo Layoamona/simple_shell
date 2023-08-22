@@ -4,6 +4,7 @@
  * main - entry point of my shell program
  * Return: returns 0 on success
  */
+
 int main(void)
 {
 	size_t bufferSize = 0;
@@ -36,7 +37,8 @@ int main(void)
 				print_env();
 				continue;
 			}
-			_execme(tokens);
+
+			_exec(tokens);
 			free(tokens);
 		}
 

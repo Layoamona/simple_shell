@@ -12,6 +12,7 @@
 #include <fcntl.h>
 #include <errno.h>
 #include <stdarg.h>
+#include <dirent.h>
 
 extern char **environ;
 
@@ -25,4 +26,12 @@ int _puts(const char *str);
 void _printfs(const char *format, ...);
 int my_strcmp(const char *str1, const char *str2);
 void _execme(char **args);
+void def_fprintf(FILE *stream, const char *format, ...);
+int def_vsnprintf(char *buffer, size_t buf_size,
+		  const char *format, va_list args);
+int def_setenv(const char *variable, const char *value);
+int def_unsetenv(const char *variable);
+int def_fputs(const char *str, FILE *stream);
+void def_current_dir(void);
+int is_valid_command(const char *command);
 #endif /*SHELL_H_*/
