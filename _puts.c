@@ -11,7 +11,7 @@ int _puts(const char *str)
 	int i;
 
 	for (i = 0; str[i] != '\0'; i++)
-		if (write(STDOUT_FILENO, &str[i], 1) < 0)
+		if (write(STDOUT_FILENO, &str[i], 1) != 1)
 			return (EOF);
 	return (i);
 }
