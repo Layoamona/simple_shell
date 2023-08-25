@@ -35,6 +35,4 @@ int def_unsetenv(const char *variable);
 int def_fputs(const char *str, FILE *stream);
 void def_current_dir(void);
 int is_valid_command(const char *command);
-void handle_comment(char *buffer);
-int _strncmp(char *s1, char *s2, size_t n);
 #endif /*SHELL_H_*/
