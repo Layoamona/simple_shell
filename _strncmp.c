@@ -11,6 +11,7 @@
 int _strncmp(char *s1, char *s2, size_t n)
 {
 	size_t i;
+
 	if (s1 == NULL || s2 == NULL)
 		return (1);
 	for (i = 0; i < n; i++)
@@ -32,6 +33,7 @@ char *_strdup(char *str)
 {
 	int i, len = 0;
 	char *dup = NULL;
+
 	len = _strlen(str);
 	dup = malloc(sizeof(char *) * len);
 	if (dup == NULL)
